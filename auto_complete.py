@@ -28,5 +28,7 @@ if __name__ == '__main__':
     os.system("python ./xinjiang.py")
     os.system("python ./xizang.py")
     os.system("python ./yunnan.py")
+    os.system("python ./zhejiang.py")
+    os.system("python ./jiangsu.py")
 
 

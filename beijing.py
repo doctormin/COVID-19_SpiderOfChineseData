@@ -1,9 +1,5 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-# In[1]:
-
-
 #11
 #By Yimin Zhao
 import requests
@@ -51,7 +47,8 @@ def get_data(web_address):
     print(info_content)
     f = open(r"D:\IIoT\20年寒假-疫情爬虫\Data\11.txt", mode = 'w', encoding = "utf-8")
     f.write(info_content)
-    f.close() 
+    f.close()
+    driver.close()
                     
 if __name__ == '__main__':
     print('begin')

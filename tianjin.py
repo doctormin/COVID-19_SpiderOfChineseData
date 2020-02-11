@@ -30,5 +30,6 @@ info_content = driver.find_element_by_xpath('//*[@class="page_content Clear"]').
 print(info_content)
 f = open(r"D:\IIoT\20年寒假-疫情爬虫\Data\12.txt", mode = 'w', encoding = "utf-8")
 f.write(info_content)
-f.close() 
+f.close()
+driver.close()
 

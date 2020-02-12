@@ -3,7 +3,6 @@
 
 # In[3]:
 
-
 #22
 #By Yimin Zhao
 import requests

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-
+#63
 # In[2]:
 #qinghai
 #By Yimin Zhao
@@ -28,7 +28,7 @@ for node in nodes:
 driver.get(info_url)
 info_content = driver.find_element_by_xpath('/html/body/div[2]/div/div[2]/div/table/tbody/tr[2]/td').text.strip()
 print(info_content)
-f = open(r"D:\IIoT\20年寒假-疫情爬虫\Data\qinghai.txt", mode = 'w', encoding = "utf-8")
+f = open(r"D:\IIoT\20年寒假-疫情爬虫\Data\63.txt", mode = 'w', encoding = "utf-8")
 f.write(info_content)
 f.close()
 driver.close()

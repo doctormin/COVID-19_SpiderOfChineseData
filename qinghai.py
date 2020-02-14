@@ -4,7 +4,6 @@
 # In[2]:
 #qinghai
 #By Yimin Zhao
-
 import requests
 from bs4 import BeautifulSoup
 import re

@@ -8,7 +8,7 @@
 import requests
 from bs4 import BeautifulSoup
 import re
-jilin = 'http://wsjkw.jl.gov.cn/xwzx/xwfb/index.html'         #卫健委的url
+jilin = 'http://wsjkw.jl.gov.cn/xwzx/xwfb/index_1.html'         #卫健委的url
 info_pattern = re.compile(r'吉林.*新.*疫情.*通报')  
 
 #找到通报疫情的url

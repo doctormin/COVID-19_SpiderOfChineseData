@@ -42,8 +42,6 @@ print(info_url)
 
 
 # In[4]:
-
-
 def get_data(web_address):
     #获取网页信息
     while(1):

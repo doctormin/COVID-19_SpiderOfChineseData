@@ -4,14 +4,14 @@
 # In[3]:
 
 
-#53
+#53K
 #By Yimin Zhao
 import requests
 from bs4 import BeautifulSoup
 import re
 
 yunnan = 'http://ynswsjkw.yn.gov.cn/wjwWebsite/web/col?id=UU157976428326282067&pId=UU145102906505319731&cn=xxgzbd&pcn=ztlm&pid=UU145102906505319731&page=1'         #卫健委的url
-info_pattern = re.compile(r'云南.*新.*冠.*肺炎.*疫情.*情况')  
+info_pattern = re.compile(r'.*云南.*新.*冠.*肺炎.*疫情.*情况')
 
 
 #找到通报疫情的url
@@ -31,8 +31,10 @@ def find_url(web_address):
     
     for element in soup.find_all(name='div',attrs = {'class':'theSimilar'}):
         for info in element.find_all('a'):
-            info_title = info.get_text()      #获取通报的标题
+            info_title = info.get_text().strip()
+            print(repr(info_title))#获取通报的标题
             if(info_pattern.match(info_title)):
+                print("matched!")
                 return(info.get('href'))
                 
 info_url = 'http://ynswsjkw.yn.gov.cn' + find_url(yunnan)

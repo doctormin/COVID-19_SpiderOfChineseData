@@ -8,7 +8,7 @@ import xlsxwriter
 import time
 import re
 anhui = 'http://wjw.ah.gov.cn/news_list_450_1.html'         #卫健委的url
-info_pattern = re.compile(r'.月.*日安徽省报告新型冠状病毒肺炎疫情情况')  
+info_pattern = re.compile(r'.*新.*疫情.*')
 
 
 #找到通报疫情的url
@@ -28,7 +28,8 @@ def find_url(web_address):
     
     for element in soup.find_all(name='div',attrs = {'class':'list'}):
         for info in element.find_all('a'):
-            info_title = info.get_text()      #获取通报的标题
+            info_title = info.get_text()
+            print(info_title)#获取通报的标题
             if(info_pattern.match(info_title)):
                 return(info.get('href'))
         

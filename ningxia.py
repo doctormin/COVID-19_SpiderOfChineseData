@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 import re
 
 ningxia = 'http://wsjkw.nx.gov.cn/yqfkdt/yqsd1.htm'         #卫健委的url
-info_pattern = re.compile(r'全区新型.*疫情通报.*')  
+info_pattern = re.compile(r'.*全区新型.*疫情.*')
 
 #找到通报疫情的url
 def find_url(web_address):
@@ -19,7 +19,7 @@ def find_url(web_address):
     while(1):
         try:
             headers = {"user-agent": "Mizilla/5.0"}
-            res = requests.get(web_address,timeout=(5, 10), headers = headers)
+            res = requests.get(web_address, timeout=(5, 10), headers = headers)
             flag = 1
             break
         except:
@@ -30,7 +30,8 @@ def find_url(web_address):
     soup = BeautifulSoup(res.text, features = 'html.parser')      #结构化处理 
     for element in soup.find_all(name='div',attrs = {'class':'eamil_box'}):
         for info in element.find_all('a'):
-            info_title = info.get_text().strip()      #获取通报的标题
+            info_title = info.get_text().strip()
+            print(info_title)#获取通报的标题
             if(info_pattern.match(info_title)):
                 return(info.get('href'))
            

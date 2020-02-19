@@ -9,6 +9,7 @@ if __name__ == '__main__':
     os.system("python ./guangxi.py")
     os.system("python ./guizhou.py")
     os.system("python ./hainan.py")
+    os.system("python ./chongqing.py")
     os.system("python ./hebei.py")
     os.system("python ./heilongjiang.py")
     os.system("python ./henan.py")

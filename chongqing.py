@@ -29,7 +29,7 @@ def find_url(web_address):
             for title in info.find_all(name = 'span', attrs = {'class':'span-title'}):
                 #print(title)
                 info_title = title.get_text().strip()
-                #print(repr(info_title))     #获取通报的标题
+                print(repr(info_title))     #获取通报的标题
                 #print(repr(info_pattern))
                 #print(info_pattern.match(info_title))
                 if(info_pattern.match(info_title)):

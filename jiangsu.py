@@ -13,7 +13,7 @@ driver = webdriver.Chrome() # Switch to Chrome if necessary
 
 
 url = 'http://wjw.jiangsu.gov.cn/col/col7290/index.html'
-info_pattern = re.compile(r'江苏.*病例')
+info_pattern = re.compile(r'.*江苏.*病例')
 info_url = ''
 info_title = ''
 

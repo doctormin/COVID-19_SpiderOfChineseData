@@ -22,7 +22,7 @@ if __name__ == '__main__':
     os.system("python ./workers/shan1xi.py")
     os.system("python ./workers/shan3xi.py")
     os.system("python ./workers/shandong.py")
-    os.system("python ./workers/shanghai.py")
+    #os.system("python ./workers/shanghai.py")
     os.system("python ./workers/sichuan.py")
     os.system("python ./workers/tianjin.py")
     os.system("python ./workers/xinjiang.py")

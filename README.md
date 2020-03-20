@@ -1,4 +1,4 @@
-# 2019-ncov Spiders🕷
+# COVID-19 Spiders🕷
 
 ## 爬取各地区卫健委官网关于新冠肺炎(2019-ncov)每日疫情数据
 
